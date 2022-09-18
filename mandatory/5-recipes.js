@@ -24,7 +24,7 @@ You should write and log at least 5 recipes
 
 **/
 
-const recipes = {
+const recipe = {
 	Title: 'spaghetti',
 	Servings: 3,
 	Ingredients: [
@@ -38,13 +38,13 @@ const recipes = {
 	],
 };
 // console.log(recipes.Title, Object.entries(recipes.Servings), recipes.Ingredients);
-console.log(recipes.Title);
-console.log(`Servings: ${recipes.Servings}`);
+console.log(recipe.Title);
+console.log(`Servings: ${recipe.Servings}`);
 console.log('Ingredients:');
-recipes.Ingredients.forEach((ingredient) => console.log(ingredient));
+recipe.Ingredients.forEach(ingredient => console.log(ingredient));
 console.log('\n');
 
-const recipes2 = {
+const recipe2 = {
 	Title: 'Garlic fried rice with crispy pork',
 	Servings: 2,
 	Ingredients: [
@@ -56,13 +56,13 @@ const recipes2 = {
 	],
 };
 
-console.log(recipes2.Title);
-console.log(`Servings: ${recipes2.Servings}`);
+console.log(recipe2.Title);
+console.log(`Servings: ${recipe2.Servings}`);
 console.log('Ingredients:');
-recipes2.Ingredients.forEach((ingredient) => console.log(ingredient));
+recipe2.Ingredients.forEach(ingredient => console.log(ingredient));
 console.log('\n');
 
-const recipes3 = {
+const recipe3 = {
 	Title: 'Peach and pancetta salad',
 	Servings: 1,
 	Ingredients: [
@@ -76,13 +76,13 @@ const recipes3 = {
 	],
 };
 
-console.log(recipes3.Title);
-console.log(`Servings: ${recipes2.Servings}`);
+console.log(recipe3.Title);
+console.log(`Servings: ${recipe3.Servings}`);
 console.log('Ingredients:');
-recipes3.Ingredients.forEach((ingredient) => console.log(ingredient));
+recipe3.Ingredients.forEach(ingredient => console.log(ingredient));
 console.log('\n');
 
-const recipes4 = {
+const recipe4 = {
 	Title: 'Chopped chilli chicken stir fry',
 	Servings: 4,
 	Ingredients: [
@@ -95,13 +95,13 @@ const recipes4 = {
 	],
 };
 
-console.log(recipes4.Title);
-console.log(`Servings: ${recipes2.Servings}`);
+console.log(recipe4.Title);
+console.log(`Servings: ${recipe4.Servings}`);
 console.log('Ingredients:');
-recipes.Ingredients.forEach((ingredient) => console.log(ingredient));
+recipe4.Ingredients.forEach(ingredient => console.log(ingredient));
 console.log('\n');
 
-const recipes5 = {
+const recipe5 = {
 	Title: 'Raw pad Thai',
 	Servings: 3,
 	Ingredients: [
@@ -113,7 +113,7 @@ const recipes5 = {
 	],
 };
 
-console.log(recipes5.Title);
-console.log(`Servings: ${recipes2.Servings}`);
+console.log(recipe5.Title);
+console.log(`Servings: ${recipe5.Servings}`);
 console.log('Ingredients:');
-recipes5.Ingredients.forEach((ingredient) => console.log(ingredient));
+recipe5.Ingredients.forEach(ingredient => console.log(ingredient));

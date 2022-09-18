@@ -23,48 +23,45 @@ and if not, log a string like 'You still need to read "The Lord of the Rings" by
 
 **/
 
-const { title } = require("process");
+const { title } = require('process');
 
-let books = [
-    {
-        title: 'As a Man Thinkth',
-        author: 'James Allen',
-        isRead: 'yes',
-    },
-    {
-        title: 'Emotional Intelligence',
-        author: 'Daniel Goleman',
-        isRead: 'yes',
-    },
-    {
-        title: 'The Power of Now',
-        author: 'Eckhart Tolle',
-        isRead: 'yes',
-    },
-    {
-        title: 'The Alchemist',
-        author: 'Paulo Coelho',
-        isRead: 'yes',
-    },
-    {
-        title: 'The Pragmatic Programmer',
-        author: 'Andrew Hunt.',
-        coauthor: 'David Thomas',
-        isRead: 'no',
-    },
-
+const books = [
+	{
+		title: 'As a Man Thinkth',
+		author: 'James Allen',
+		isRead: true,
+	},
+	{
+		title: 'Emotional Intelligence',
+		author: 'Daniel Goleman',
+		isRead: true,
+	},
+	{
+		title: 'The Power of Now',
+		author: 'Eckhart Tolle',
+		isRead: true,
+	},
+	{
+		title: 'The Alchemist',
+		author: 'Paulo Coelho',
+		isRead: true,
+	},
+	{
+		title: 'The Pragmatic Programmer',
+		author: 'Andrew Hunt.',
+		coauthor: 'David Thomas',
+		isRead: false,
+	},
 ];
 
-let booksAndAuthors = books.map(entry => `${entry.title} by ${entry.author}`);
+const booksAndAuthors = books.forEach(entry => console.log(`${entry.title} by ${entry.author}`));
 
-console.log(booksAndAuthors);
-
-let checkIfIHaveReadIt = books.map((entry) => {
-    if (entry.isRead === 'yes') {
-        return `I have already read ${entry.title} by ${entry.author}`; 
-    } else {
-        return `I still need to read ${entry.title} by ${entry.author}`;
-    }
+const checkIfIHaveReadIt = books.forEach(entry => {
+	if (entry.isRead) {
+		console.log(`I have already read ${entry.title} by ${entry.author}`);
+	} else {
+		console.log(
+			`I still need to read ${entry.title} by ${entry.author}`
+		);
+	}
 });
-
-console.log(checkIfIHaveReadIt);

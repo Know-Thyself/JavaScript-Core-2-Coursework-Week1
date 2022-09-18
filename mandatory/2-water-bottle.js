@@ -21,56 +21,37 @@ You have to implement the missing features according to the specification.
 
 // Here is your starting point:
 let bottle = {
-  volume: 0,
-  fillUp: function () {
-    // calling this function should completely fill your bottle (volume = 100);
-    return this.volume = this.volume + (100 - this.volume);
-   
-  },
-
-  pour: function () {
-    // calling this function should increase your bottle volume by 10 units;
-    if(bottle.volume <= 90) {
-      return this.volume = this.volume + 10;
-    } else {
-      return this.volume;
-    }
-    },
-
-  drink: function () {
-    // calling this function should decrease your bottle volume by 10 units;
-    if (this.volume >= 10) {
-      return this.volume = this.volume - 10;
-    } else {
-      return this.volume;
-    }  
-  },
-
-  isFull: function () {
-    // this function should return true if your bottle is full;
-    if (this.volume === 100) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-  isEmpty: function () {
-    // this function should return true if your bottle is empty;
-    if (this.volume === 0) {
-      return true;
-    } else  {
-      return false;
-    }
-  },
-  warn: function () {
-    if (this.volume === 0) {
-      return warn;
-    }
-  }
+	volume: 0,
+	fillUp: function () {
+		// calling this function should completely fill your bottle (volume = 100);
+		this.volume = 100;
+	},
+	pour: function () {
+		// calling this function should increase your bottle volume by 10 units;
+		if (bottle.volume <= 90) {
+			this.volume = this.volume + 10;
+		}
+	},
+	drink: function () {
+		// calling this function should decrease your bottle volume by 10 units;
+		if (this.volume >= 10) {
+			this.volume = this.volume - 10;
+		}
+	},
+	isFull: function () {
+		// this function should return true if your bottle is full;
+		return this.volume === 100;
+	},
+	isEmpty: function () {
+		// this function should return true if your bottle is empty;
+		return this.volume === 0
+	},
+	warn: function () {
+		if (this.volume === 0) {
+			return warn;
+		}
+	},
 };
-
-console.log(this.volume);
-
 
 /*
 TIP:
@@ -99,19 +80,19 @@ bottle.fillUp();
 
 // CHECKS
 if (bottle.isFull()) {
-  console.log(`That's correct! Bottle is full.`);
+	console.log(`That's correct! Bottle is full.`);
 } else {
-  failed = true;
-  console.warn(`Not quite right! Bottle should be full but it is not.`);
+	failed = true;
+	console.warn(`Not quite right! Bottle should be full but it is not.`);
 }
 
 if (!bottle.isEmpty()) {
-  console.log(`That's correct! Bottle isn't empty.`);
+	console.log(`That's correct! Bottle isn't empty.`);
 } else {
-  failed = true;
-  console.warn(
-    `Not quite right! Bottle should not be empty but it is already.`
-  );
+	failed = true;
+	console.warn(
+		`Not quite right! Bottle should not be empty but it is already.`
+	);
 }
 
 // ACTIONS
@@ -119,21 +100,21 @@ bottle.pour();
 
 // CHECKS
 if (bottle.volume === 100) {
-  console.log(
-    `That's correct. Bottle is already full water volume cannot go beyond.`
-  );
+	console.log(
+		`That's correct. Bottle is already full water volume cannot go beyond.`
+	);
 } else {
-  failed = true;
-  console.warn(
-    `Whoops!!! Looks like you've changed your bottle to a bigger one, it went beyond its maximum capacity up to ${bottle.volume} unit.`
-  );
+	failed = true;
+	console.warn(
+		`Whoops!!! Looks like you've changed your bottle to a bigger one, it went beyond its maximum capacity up to ${bottle.volume} unit.`
+	);
 }
 
 if (bottle.isFull()) {
-  console.log(`That's correct! Bottle is still full.`);
+	console.log(`That's correct! Bottle is still full.`);
 } else {
-  failed = true;
-  console.warn(`Not quite right! Bottle should be still full but is not.`);
+	failed = true;
+	console.warn(`Not quite right! Bottle should be still full but is not.`);
 }
 
 // ACTIONS
@@ -143,12 +124,12 @@ bottle.drink();
 
 // CHECKS
 if (bottle.volume === 70) {
-  console.log(`That's correct! Water volume is ${bottle.volume}.`);
+	console.log(`That's correct! Water volume is ${bottle.volume}.`);
 } else {
-  failed = true;
-  console.warn(
-    `Not quite right! Water volume should be 70 unit instead of ${bottle.volume}.`
-  );
+	failed = true;
+	console.warn(
+		`Not quite right! Water volume should be 70 unit instead of ${bottle.volume}.`
+	);
 }
 
 // ACTIONS
@@ -158,20 +139,20 @@ bottle.drink();
 
 // CHECKS
 if (!bottle.isFull()) {
-  console.log(`That's correct! Bottle isn't full.`);
+	console.log(`That's correct! Bottle isn't full.`);
 } else {
-  failed = true;
-  console.warn(`Not quite right! Bottle should not be full but it is.`);
+	failed = true;
+	console.warn(`Not quite right! Bottle should not be full but it is.`);
 }
 
 if (!bottle.isEmpty()) {
-  console.log(`That's correct! Bottle isn't empty yet.`);
+	console.log(`That's correct! Bottle isn't empty yet.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(
-    `Not quite right! Bottle should not be still empty but it is already.`
-  );
+	console.warn(
+		`Not quite right! Bottle should not be still empty but it is already.`
+	);
 }
 
 // ACTIONS
@@ -182,23 +163,23 @@ bottle.drink();
 
 // CHECKS
 if (bottle.isEmpty()) {
-  console.log(`That's correct! Bottle is finally emptied.`);
+	console.log(`That's correct! Bottle is finally emptied.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(
-    `Not quite right. Bottle should be already empty but it is not.`
-  );
+	console.warn(
+		`Not quite right. Bottle should be already empty but it is not.`
+	);
 }
 
 if (bottle.volume === 0) {
-  console.log(`That's correct! Empty bottle volume is repesented as zero.`);
+	console.log(`That's correct! Empty bottle volume is repesented as zero.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(
-    `Not quite right. Volume should be zero instead of ${bottle.volume}.`
-  );
+	console.warn(
+		`Not quite right. Volume should be zero instead of ${bottle.volume}.`
+	);
 }
 
 // ACTIONS
@@ -206,19 +187,19 @@ bottle.drink();
 
 // CHECKS
 if (bottle.volume === 0) {
-  console.log(`That's correct! Water volume cannot go below zero.`);
+	console.log(`That's correct! Water volume cannot go below zero.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(
-    `Whoops!!! Looks like your water volume went negative. Your water volume is ${bottle.volume} unit.`
-  );
+	console.warn(
+		`Whoops!!! Looks like your water volume went negative. Your water volume is ${bottle.volume} unit.`
+	);
 }
 
 if (bottle.isEmpty()) {
-  console.log(`That's correct! Bottle is still empty.`);
+	console.log(`That's correct! Bottle is still empty.`);
 } else {
-  console.warn(`Not quite right. Bottle should be empty but it is not.`);
+	console.warn(`Not quite right. Bottle should be empty but it is not.`);
 }
 
 // ACTIONS
@@ -226,31 +207,31 @@ bottle.pour();
 
 // CHECKS
 if (bottle.volume === 10) {
-  console.log(`That's correct! Water volume is ${bottle.volume}.`);
+	console.log(`That's correct! Water volume is ${bottle.volume}.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(
-    `Not quite right! Water volume should be 10 unit instead of ${bottle.volume}.`
-  );
+	console.warn(
+		`Not quite right! Water volume should be 10 unit instead of ${bottle.volume}.`
+	);
 }
 
 if (!bottle.isFull()) {
-  console.log(`That's correct! Bottle isn't yet full.`);
+	console.log(`That's correct! Bottle isn't yet full.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(`Not quite right! Bottle should not be full but it is.`);
+	console.warn(`Not quite right! Bottle should not be full but it is.`);
 }
 
 if (!bottle.isEmpty()) {
-  console.log(`That's correct! Bottle isn't empty anymore.`);
+	console.log(`That's correct! Bottle isn't empty anymore.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(
-    `Not quite right! Bottle should not be empty again but it is still.`
-  );
+	console.warn(
+		`Not quite right! Bottle should not be empty again but it is still.`
+	);
 }
 
 // ACTIONS
@@ -258,19 +239,19 @@ bottle.drink();
 
 // CHECKS
 if (bottle.isEmpty()) {
-  console.log(`That's correct! Bottle is emptied once more.`);
+	console.log(`That's correct! Bottle is emptied once more.`);
 } else {
-  failed = true;
+	failed = true;
 
-  console.warn(`Not quite right. Bottle should be empty again but it is not.`);
+	console.warn(`Not quite right. Bottle should be empty again but it is not.`);
 }
 
-console.log("");
+console.log('');
 
 if (failed) {
-  console.log(
-    "RESULT: Incorrect. Please read what went wrong above and try again"
-  );
+	console.log(
+		'RESULT: Incorrect. Please read what went wrong above and try again'
+	);
 } else {
-  console.log("RESULT: Correct! Congratulations!");
+	console.log('RESULT: Correct! Congratulations!');
 }
